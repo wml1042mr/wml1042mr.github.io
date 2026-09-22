@@ -1852,3 +1852,12 @@ main {
 @media (max-width: 540px) {
   .contact-page .contact-socials { gap: 20px 28px; }
 }
+
+/* Align the Movies block with the portrait's right edge on desktop. */
+@media (min-width: 901px) {
+  .home-page .home-films {
+    width: 100%;
+    max-width: 460px;
+    justify-self: end;
+  }
+}
