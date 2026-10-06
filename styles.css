@@ -1773,6 +1773,35 @@ main {
   font-size: 12px;
   gap: 10px;
 }
+/* Pair each listening image with its own playlist link. */
+.home-page .playlist-row {
+  display: grid;
+  grid-template-columns: min(100%, 240px) max-content;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+.home-page .playlist-row .playlist-art,
+.home-page .playlist-row .arrow-link {
+  margin-top: 0;
+}
+.home-page .playlist-row .arrow-link {
+  align-self: end;
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  .home-page .playlist-row { gap: 16px; }
+  .home-page .playlist-row .arrow-link { max-width: 110px; }
+}
+@media (max-width: 900px) {
+  .home-page .playlist-row { grid-template-columns: 230px max-content; }
+}
+@media (max-width: 540px) {
+  .home-page .playlist-row {
+    grid-template-columns: minmax(0, 230px) 100px;
+    gap: 16px;
+  }
+  .home-page .playlist-row .arrow-link { justify-self: start; }
+}
 .home-page .films-subtitle {
   font-size: 13px;
   margin-top: 8px;
